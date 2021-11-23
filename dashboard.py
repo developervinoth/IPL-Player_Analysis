@@ -2,6 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+from datetime import date
 
 # Reading CSV Files From Directory
 team_details = pd.read_csv('Flat_files/Match.csv')
@@ -17,7 +18,7 @@ st.set_page_config(  # Alternate names: setup_page, page, layout
 	page_icon=None,  # String, anything supported by st.image, or None.
 )
 
-page_select = st.selectbox('Choose Page', ['Team vs Team', 'Player Comparision', 'Season Comparision'],)
+page_select = st.selectbox('Choose Page', ['Team vs Team', 'Player vs Player'],)
 
 col1, col2, col3 = st.columns(3)
 
@@ -60,7 +61,7 @@ if page_select == 'Team vs Team':
     col3.subheader(team2Wins)
     st.table(teamVsTeam[['S.No','match_date','Toss_Winner','match_winner','Toss_Name','ManOfMach','Venue_Name']])
 
-if page_select == 'Player Comparision':
+if page_select == 'Player vs Player':
     playerNames = player_details['Player_Name'].drop_duplicates()
     playerOne = cl1.selectbox('Select Player One',playerNames)
     playerTwo = cl2.selectbox('Select Player Two',playerNames)
