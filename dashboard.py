@@ -4,6 +4,19 @@ import streamlit as st
 import numpy as np
 from datetime import date
 
+st.session_state['answer'] = ''
+
+st.write(st.session_state)
+
+realans = ['', 'abc', 'edf']
+
+if  st.session_state['answer'] in realans:
+    answerStat = "correct"
+elif st.session_state['answer'] not in realans:
+    answerStat = "incorrect"
+
+
+
 # Reading CSV Files From Directory
 team_details = pd.read_csv('Flat_files/Match.csv')
 player_details = pd.read_csv('Flat_files/Player.csv')
