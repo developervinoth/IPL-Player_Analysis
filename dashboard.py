@@ -8,7 +8,7 @@ from datetime import date
 team_details = pd.read_csv('Flat_files/Match.csv')
 player_details = pd.read_csv('Flat_files/Player.csv')
 player_matches = pd.read_csv('Flat_files/Player_match.csv')
-ballByBall = pd.read_csv('https://github.com/developervinoth/Ipl_Dashboard_Python/blob/master/Flat_files/Ball_By_Ball.csv')
+ballByBall = pd.read_csv('Ball_By_Ball.csv')
 
 #Page Configuration
 st.set_page_config(  # Alternate names: setup_page, page, layout
