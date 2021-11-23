@@ -5,10 +5,17 @@ import numpy as np
 from datetime import date
 
 # Reading CSV Files From Directory
+<<<<<<< HEAD
 team_details = pd.read_csv('Flat_files/Match.csv',encoding='windows-1252')
 player_details = pd.read_csv('Flat_files/Player.csv',encoding='windows-1252')
 player_matches = pd.read_csv('Flat_files/Player_match.csv',encoding='windows-1252')
 ballByBall = pd.read_csv('Flat_files/Ball_by_Ball.csv',encoding='windows-1252')
+=======
+team_details = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Match.csv')
+player_details = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Player.csv')
+player_matches = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Player_match.csv')
+ballByBall = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Ball_By_Ball.csv')
+>>>>>>> 3492027164bb38d36e87ebb89079184619f3d58c
 
 #Page Configuration
 st.set_page_config(  # Alternate names: setup_page, page, layout
