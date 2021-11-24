@@ -7,15 +7,19 @@ from datetime import date
 # Reading CSV Files From Directory
 
 
-team_details = pd.read_csv('Flat_files/Match.csv',encoding='windows-1252')
-player_details = pd.read_csv('Flat_files/Player.csv',encoding='windows-1252')
-player_matches = pd.read_csv('Flat_files/Player_match.csv',encoding='windows-1252')
-ballByBall = pd.read_csv('Flat_files/Ball_by_Ball.csv',encoding='windows-1252')
+
+
+team_details = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Match.csv',encoding='windows-1252')
+player_details = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Player.csv',encoding='windows-1252')
+player_matches = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Player_match.csv',encoding='windows-1252')
+ballByBall = pd.read_csv('https://raw.githubusercontent.com/developervinoth/Ipl_Dashboard_Python/master/Flat_files/Ball_By_Ball.csv',encoding='windows-1252')
+
+
 
 #Page Configuration
 st.set_page_config(  # Alternate names: setup_page, page, layout
 	layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
-	initial_sidebar_state="collapsed",  # Can be "auto", "expanded", "collapsed"
+	initial_sidebar_state="auto",  # Can be "auto", "expanded", "collapsed"
 	page_title=None,  # String or None. Strings get appended with "• Streamlit". 
 	page_icon=None,  # String, anything supported by st.image, or None.
 )
